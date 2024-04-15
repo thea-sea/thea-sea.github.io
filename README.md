@@ -1,119 +1,95 @@
-# Thea Sea - Full Stack Software Developer
+# cvless
 
-<img src="https://img.bumpp.io/users/65ed75d5b27abc2405693949/avatar/HwvfNxcOYV.png" alt="Portfolio Image" width="350">
+Cvless is a theme for static websites built with Jekyll. It aims for simplicity and readability by following best practices of graphic design, like the use of [high contrast](https://www.contrastrebellion.com), [law of proximity](https://lawsofux.com/law-of-proximity), and responsive layout. Its typography is based on the [Piazzolla system](https://piazzolla.huertatipografica.com/), which performs extremely well over a wide range of font sizes.
 
-<a href="https://www.linkedin.com/in/thea-sea-01a11923a/">LinkedIn Profile </a>
+The main aesthetic feature of the theme is the use of [particles.js](https://vincentgarreau.com/particles.js/) in the home and the 404 pages. In addition, the theme includes a well-designed CV page. Printing this from browser automatically adapts the layout for a more traditional appearance, so you no longer have to maintain a separate CV for offline distribution. Finally, the theme offers a simple and easily extensible blog.
 
-<a href="https://github.cm/thea-sea/">GitHub Profile</a>
+Light and dark modes are available. The theme initializes based on system preferences and stores the user's preference for the duration of the session.
 
+See the [demo](https://piazzai.github.io/cvless) to get a better sense of what the theme looks like.
 
-## About Me
+![](https://github.com/piazzai/cvless/blob/master/screenshot.png)
 
-I am a dedicated and versatile individual known for being an avid team player and having an approachable demeanor. I have an open mind for learning and consistently strive to exceed expectations, bringing a strong work ethic and a quick ability to grasp new skills. Setting myself apart from my peers, I am characterized by my adaptability, flexibility, initiative, and resilience, making me a fast learner who can seamlessly integrate into new challenges.
+## Installation
 
-## Objective
+The theme can be installed as usual by cloning this repository and editing the files. However, it is far more convenient to install it as a gem, in which case all the files you do not want or need to customize remain hidden from view, but will still be read and processed during build.
 
-To obtain a challenging software developer position in a dynamic and innovative organization where I can use my technical and analytical skills.
+If you choose to install the theme as a gem, your site should include at a minimum the following files:
 
-I am currently looking for a 8 month credit-bearing internship as part of my University's Work-Study Programme.
+```bash
+.
+├── 404.md
+├── _config.yml
+├── Gemfile
+├── cv.md
+└── index.md
+```
 
-Internship Start Date: 2 Sep 2024
+To install the theme, you can then add this line to your `Gemfile`:
 
-Internship End Date: 11 Apr 2025
+```ruby
+gem "cvless"
+```
 
-## Projects
+And this line to `_config.yml`:
 
-### Editor Lead, Year 3 GAM300 Software Engineering Project | 2023-2024
-- Developed a 3D custom game engine with Vulkan Graphics API. SDL and and Assimp
-- Created the game editor interface using ImGui, including ECS, Editor Hierarchy and ImGuizmo Scene Interaction
-- Worked on Asset Loader, Content Browser, Editor Performance Profiler
-- Collaborated with UI and Audio Designers to implement UI, BGM and SFX 
+```yaml
+theme: cvless
+```
 
-<a href="https://github.com/Runic2H/GAM300">Visit GAM300 GitHub Repository</a>
+The easiest way to set up a new website in this way is to clone the contents of the `demo` folder. This provides a working set of files to get you started. You can remove what you will not use, such as the contents of the `_posts` folder.
 
+After you are done creating the basic files, run bundler:
 
-<img src="readMeMedia/GameEngine_Preview.png" alt="Engine Preview" width="800">
+    $ bundle
 
-<img src="readMeMedia/GameEngine_Preview3.png" alt="Lighting Preview" width="800">
+Or install the gem yourself as:
 
+    $ gem install jekyll-nagymaros
 
+To customize hidden files, you can create new files with the same names and paths. For example, to change the layout of the index page, you can create a `_layouts` folder and a file `index.html` within this folder that contains your custom code. During build, Jekyll will give priority to your files over the theme's.
 
-### Procedural Content Generation Programmer, Year 2 Artificial Intelligence (AI) Project | 2023
-- Developed AI-generated house layouts based on user input
-- Co-authored a Wave Collapse function for generative AI
-- Managed project workflow with Figma and Trello
-- Utilised Unity as a game engine for display of 3D models 
+## Usage
 
-![PCG House Layout](readMeMedia/PCGHouses.jpg)
+Basic configuration occurs in `_config.yml`. This contains site variables such as title, tagline, url, and repository address, as well as the author's name and email address for inclusion in blog posts. You can specify the path to an avatar for inclusion in the home (optional).
 
+More advanced configuration requires altering some files that are not included in the `demo` template and are hidden in the original theme. There are three files you might want to customize. First, you could change icon links in `_includes/particles-home.html` and add/remove icons as needed. You may add icons that are not included in the theme by default. For more information on how to do this, see [this post](https://piazzai.github.io/cvless/2022/08/01/on-the-use-of-icons/).
 
-### Gameplay Mechanics Lead, Year 2 GAM200 Software Engineering Project | 2022-2023
-- Developed a 2D custom game engine, which was showcased at the IMDA Digital For Life Festival
-- Managed gameplay elements such as player physics, animated elements and mouse events
-- Gained experience with serializing and deserializing game scenes with JSON files
-- Setup and utilised FMOD for game BGM and SFX
+Second, you might want to edit the style variables specified in `_sass/_variables.scss`. These allow you to customize the theme's color scheme and typefaces. There are many resources on the web to learn the principles of good web design. I personally recommend Matthew Butterick's [Practical Typography](https://practicaltypography.com/websites.html).
 
-Thea facilitating this project's Showcase at IMDA Digital For Life Festival:
+In addition to these files, you can customize favicons in the `assets` folder. For that, [favicon.io](https://favicon.io/) is an excellent tool. You can also change the particles.js configurations in `assets/js/particles.json`. The [library homepage](https://vincentgarreau.com/particles.js/) features an interactive tool from which you can export a new configuration.
 
-<img src="readMeMedia/IMDA_DigitalForLife.jpg" alt="IMDA Game Showcase" width="800">
+## Local development
 
-Game Preview Video: 
-<video width="800" height="450" controls>
-  <source src="readMeMedia/SushiMiGameplay.mp4" type="video/mp4">
-  Our Editor Demo.
-</video>
+The `demo` folder includes a docker-compose file that allows you to quickly setup a container running Jekyll. If you don't already have Docker and Docker Compose installed, you can install them using the following guides:
 
-<img src="https://file.notion.so/f/f/3115a4b9-f2c3-4953-895d-599999169447/2ae716d0-10f6-4013-8503-b90ade465369/SushiMi_Game_Preview.png?id=28d3a884-22bd-47d0-8549-5fcead4dd940&table=block&spaceId=3115a4b9-f2c3-4953-895d-599999169447&expirationTimestamp=1712188800000&signature=x_dgV6FJD_vXiWdS6_YAV38mqGUReAFujCBx5JcflGw&downloadName=SushiMi_Game_Preview.png" alt="SushiMi Game" width="800">
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
-<a href="https://github.com/thea-sea/Software-Engineering-Project/">Visit SushiMi GitHub Repository</a>
+To start the container simply run:
 
-## Skills
-- Artificial Intelligence
-- Machine Learning
-- Project Management
-- Problem Solving
-- Effective Communication
-- Leadership
-- Interpersonal Skills
-- Critical Thinking
-- Adaptability
-- Sales and Product Pitching
-- Research
+```
+docker-compose up
+```
 
-## Experience
+Alternatively, you can run the container without Docker Compose using this command on iOS/Linux:
 
-### Coding Instructor, The Lab Singapore | 2023-Present
-- Facilitating project-based learning experiences that encourage students to work collaboratively to solve problems using robotics and coding via Lego SPIKE
-- Oversee daily operations of the centre including planning coding curriculum
+```
+docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
+```
 
-### Research Intern, Singapore University of Technology and Design (SUTD) Research Internship | 2019-2020
-- Developed prototypes using Autodesk AutoCAD
-- Coded interactive electronic objects using Arduino
-- Troubleshooted and fixed prototype bugs
-- Cleaned and pre-processed data for research papers
-- Developed behavior trees for prototype AI
+## Credits
 
-### Sales Brand Ambassador, SalesWorks | 2019
-- Achieved Top 50 on SalesWorks International bulletin, amongst salespersons from Taiwan, Malaysia and Singapore
-- Facilitated B2B and B2C sales at Event Roadshows, representing companies such as Singtel, Dominos and 88Tuition  
-- Improved my pitching and product knowledge skills in order to improve sales figures
-- Learnt negotiation skills and interpersonal skills to build rapport with potential customers
-- Acquired Customer Service skills and conducted sales follow-ups
+The theme draws in one way or another from the following projects:
 
-## Leadership and Accolades
-- Vice-President of SIT Orientation | 2021-2022
-- Edusave Good Progress Award | 2019
-- Colours Award for Leadership | 2018
+-   [Bootstrap](https://getbootstrap.com/)
+-   [Hack](https://sourcefoundry.org/hack/)
+-   [Iconoir](https://iconoir.com/)
+-   [Open Color](https://yeun.github.io/open-color/)
+-   [Particles.js](https://vincentgarreau.com/particles.js/)
+-   [Piazzolla](https://piazzolla.huertatipografica.com/)
+-   [Poole](https://getpoole.com/)
 
-## Education
-- Bachelor of Science in Computer Science in Real-Time Interactive Simulation | 2021 – Present | DigiPen Institute of Technology 
-	Expected Graduation Date: September 2025
-- GCE ‘A’ Levels | 2019 – 2020 | Eunoia Junior College
+## Bugs
 
-## Contact 
-
-Reach out to me for Work opportunities, projects and collaborations via Email at <a href="mailto:thea.sea@igipen.edu">thea.sea@digipen.edu</a> !
-
-<a href="https://www.linkedin.com/in/thea-sea-01a11923a/">Connect with me on LinkedIn here! </a>
-
-This website was coded from scratch by Thea using HTML and CSS
+If you find any problem using this theme, please [open an issue](https://github.com/piazzai/cvless/issues).
