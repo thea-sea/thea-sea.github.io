@@ -32,9 +32,9 @@ Internship End Date: 11 Apr 2025
 <a href="https://github.com/Runic2H/GAM300">Visit GAM300 GitHub Repository</a>
 
 
-<img src="https://file.notion.so/f/f/3115a4b9-f2c3-4953-895d-599999169447/4f7f65d1-aef3-4e3a-8fc8-7976dbe45e6e/GameEngine_Preview.png?id=f5901bf9-3292-4f6f-8ff7-c37cbf275d1c&table=block&spaceId=3115a4b9-f2c3-4953-895d-599999169447&expirationTimestamp=1712188800000&signature=rT-li2z5NaHW2bqRLmSAniOt-JOeYbZ8r4KUKqnVeh8&downloadName=GameEngine_Preview.png" alt="Engine Preview" width="800">
+<img src="readMeMedia/GameEngine_Preview.png" alt="Engine Preview" width="800">
 
-<img src="https://file.notion.so/f/f/3115a4b9-f2c3-4953-895d-599999169447/b94d2ac5-7583-471b-a08d-cf75eea4ba91/GameEngine_Preview3.png?id=2099a0e5-9922-4d98-a163-3e05fda0d685&table=block&spaceId=3115a4b9-f2c3-4953-895d-599999169447&expirationTimestamp=1712188800000&signature=ONhmIeLal4V66WqhOcjoFxcJrUmgChPPRpvoJ5Jcl4w&downloadName=GameEngine_Preview3.png" alt="Lighting Preview" width="800">
+<img src="readMeMedia/GameEngine_Preview3.png" alt="Lighting Preview" width="800">
 
 
 
