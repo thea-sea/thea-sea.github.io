@@ -8,5 +8,6 @@ My adaptability, flexibility, initiative and resilience, makes me a fast learner
 
 If you share my passion to create solutions that make a positive difference on the world, feel free to connect with me :)
 
-Email: thea.sea@digipen
+Email: thea.sea@digipen.edu
+
 Linkedin: https://www.linkedin.com/in/thea-sea-01a11923a/
